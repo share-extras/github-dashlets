@@ -1,0 +1,6 @@
+<webscript>
+    <shortname>GitHub Notifications</shortname>
+    <description>Display user notifications from GitHub</description>
+    <url>/extras/dashlets/github-notifications</url>
+    <family>dashlet</family>
+</webscript>

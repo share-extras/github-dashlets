@@ -1,0 +1,23 @@
+<alfresco-config>
+
+    <config evaluator="string-compare" condition="Remote">
+        <remote>
+            <!-- Connector instances -->
+            <connector>
+                <id>github-api</id>
+                <name>GitHub API Connector</name>
+                <description>Connector for making requests to GitHub's RESTful API</description>
+                <class>org.sharextras.webscripts.connector.HttpOAuth2QueryStringConnector</class>
+                <identity>user</identity>
+            </connector>
+            <!-- Endpoints -->
+            <endpoint>
+                <id>github-api</id>
+                <name>Chatter REST API</name>
+                <connector-id>github-api</connector-id>
+                <endpoint-url>https://api.github.com</endpoint-url>
+            </endpoint>
+        </remote>
+    </config>
+   
+</alfresco-config>
