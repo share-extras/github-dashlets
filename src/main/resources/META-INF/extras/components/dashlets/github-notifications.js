@@ -171,8 +171,8 @@ if (typeof Extras.dashlet == "undefined" || !Extras.dashlet)
               },
               failureCallback: {
                   fn: function(p_obj) {
-                      // Need to re-authenticate in case of a 401
-                      if (p_obj.serverResponse.status == 401)
+                      // Need to re-authenticate in case of a 401 (Unauthorized) or 403 (Forbidden)
+                      if (p_obj.serverResponse.status == 401 || p_obj.serverResponse.status == 403)
                       {
                           this.showConnect();
                       }
