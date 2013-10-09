@@ -83,15 +83,6 @@ if (typeof Extras.dashlet == "undefined" || !Extras.dashlet)
       options:
       {
          /**
-          * Max items
-          * 
-          * @property maxItems
-          * @type integer
-          * @default 50
-          */
-         maxItems: 50,
-         
-         /**
           * Identifier used for storing the an OAuth 2.0 token in the repository personal credentials
           * store.
           * 
