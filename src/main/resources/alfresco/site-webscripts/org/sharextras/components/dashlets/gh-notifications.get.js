@@ -1,5 +1,8 @@
 function main()
 {
+   var endpointId = "github-api",
+      connector = remote.connect(endpointId);
+
    var dashletResizer = {
       id : "DashletResizer",
       name : "Alfresco.widget.DashletResizer",
@@ -11,8 +14,9 @@ function main()
       id : "GitHubNotifications",
       name : "Extras.dashlet.GitHubNotifications",
       options: {
-         // TODO Need to get these values from the web tier config (same source as used by connector)
-         clientId: "0b2807d35864befb93c7"
+         endpointId: endpointId,
+         clientId: connector.getDescriptor().getStringProperty("client-id"),
+         authorizationUrl: "https://github.com/login/oauth/authorize"
       }
    };
    

@@ -97,24 +97,24 @@ if (typeof Extras.dashlet == "undefined" || !Extras.dashlet)
           * 
           * @property endpointId
           * @type string
-          * @default "github-api"
+          * @default ""
           */
-         endpointId: "github-api",
+         endpointId: "",
          
          /**
           * URI of the provider's authorization page. If an access token does not already exist then the
           * user will be sent here in order to obtain one.
           * 
-          * @property loginUrl
+          * @property authorizationUrl
           * @type string
-          * @default "https://github.com/login/oauth/authorize"
+          * @default ""
           */
-         loginUrl: "https://github.com/login/oauth/authorize",
+         authorizationUrl: "",
          
          /**
           * Comma-separated list of scopes to be requested
           * 
-          * @property loginUrl
+          * @property scopes
           * @type string
           * @default "notifications"
           */
@@ -298,7 +298,7 @@ if (typeof Extras.dashlet == "undefined" || !Extras.dashlet)
                Alfresco.constants.URL_PAGECONTEXT + this.options.returnPage + "/" + encodeURIComponent(this.options.endpointId),
             pageUrl = window.location.pathname.replace(Alfresco.constants.URL_CONTEXT, ""),
             state = "rp=" + encodeURIComponent(pageUrl),
-            authUri = this.options.loginUrl + 
+            authUri = this.options.authorizationUrl + 
                "?response_type=code&client_id=" + 
                this.options.clientId + "&redirect_uri=" +
                encodeURIComponent(returnUrl) + "&state=" + 

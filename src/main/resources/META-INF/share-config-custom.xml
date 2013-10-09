@@ -2,23 +2,14 @@
 
     <config evaluator="string-compare" condition="Remote">
         <remote>
-            <!-- Connector instances -->
-            <connector>
-                <id>github-api</id>
-                <name>GitHub API Connector</name>
-                <description>Connector for making requests to GitHub's RESTful API</description>
-                <class>org.sharextras.webscripts.connector.HttpOAuth2QueryStringConnector</class>
-                <identity>user</identity>
-                <client-id>0b2807d35864befb93c7</client-id>
-                <client-secret>4fce1930289cd2e6e1cdfe1cc15cc9cabaa86731</client-secret>
-                <access-token-url>https://github.com/login/oauth/access_token</access-token-url>
-            </connector>
-            <!-- Endpoints -->
             <endpoint>
                 <id>github-api</id>
                 <name>Chatter REST API</name>
-                <connector-id>github-api</connector-id>
+                <connector-id>oauth2-querystring</connector-id>
                 <endpoint-url>https://api.github.com</endpoint-url>
+                <client-id>0b2807d35864befb93c7</client-id>
+                <client-secret>4fce1930289cd2e6e1cdfe1cc15cc9cabaa86731</client-secret>
+                <access-token-url>https://github.com/login/oauth/access_token</access-token-url>
             </endpoint>
         </remote>
     </config>
