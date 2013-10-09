@@ -9,6 +9,9 @@
                 <description>Connector for making requests to GitHub's RESTful API</description>
                 <class>org.sharextras.webscripts.connector.HttpOAuth2QueryStringConnector</class>
                 <identity>user</identity>
+                <client-id>0b2807d35864befb93c7</client-id>
+                <client-secret>4fce1930289cd2e6e1cdfe1cc15cc9cabaa86731</client-secret>
+                <access-token-url>https://github.com/login/oauth/access_token</access-token-url>
             </connector>
             <!-- Endpoints -->
             <endpoint>

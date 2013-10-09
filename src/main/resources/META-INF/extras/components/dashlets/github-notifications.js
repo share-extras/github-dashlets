@@ -138,9 +138,9 @@ if (typeof Extras.dashlet == "undefined" || !Extras.dashlet)
           * 
           * @property returnPage
           * @type string
-          * @default "extras/github/github-return"
+          * @default "extras/oauth/auth2-return"
           */
-         returnPage: "extras/github/github-return"
+         returnPage: "extras/oauth/auth2-return"
       },
 
       /**
@@ -295,7 +295,7 @@ if (typeof Extras.dashlet == "undefined" || !Extras.dashlet)
          // TODO add a random parameter to the state and ensure that this comes back unmodified
          
          var returnUrl = window.location.protocol + "//" + window.location.host + 
-               Alfresco.constants.URL_PAGECONTEXT + this.options.returnPage,
+               Alfresco.constants.URL_PAGECONTEXT + this.options.returnPage + "/" + encodeURIComponent(this.options.endpointId),
             pageUrl = window.location.pathname.replace(Alfresco.constants.URL_CONTEXT, ""),
             state = "rp=" + encodeURIComponent(pageUrl),
             authUri = this.options.loginUrl + 
