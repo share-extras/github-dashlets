@@ -15,7 +15,7 @@ function main()
       name : "Extras.dashlet.GitHubNotifications",
       options: {
          endpointId: endpointId,
-         clientId: connector.getDescriptor().getStringProperty("client-id"),
+         clientId: connector != null ? connector.getDescriptor().getStringProperty("client-id") : "",
          authorizationUrl: "https://github.com/login/oauth/authorize"
       }
    };
