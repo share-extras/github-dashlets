@@ -9,8 +9,7 @@ Pre-requisites
 --------------
 
 * Alfresco 4.2.d or later
-* Latest [Share-OAuth](https://github.com/share-extras/share-oauth) code built from `oauth2-connector` branch
-* [Chatter Dashlet](https://github.com/Alfresco/chatter-dashlet) repository AMP (temporary, relevant code will be merged into Share OAuth soon)
+* Latest [Share-OAuth](https://github.com/share-extras/share-oauth) code built from `master` branch
 
 Building and Installing
 -----------------------
