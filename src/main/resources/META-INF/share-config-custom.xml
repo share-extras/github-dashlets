@@ -4,7 +4,7 @@
         <remote>
             <endpoint>
                 <id>github-api</id>
-                <name>Chatter REST API</name>
+                <name>GitHub REST API</name>
                 <connector-id>oauth2-querystring</connector-id>
                 <endpoint-url>https://api.github.com</endpoint-url>
                 <client-id>0b2807d35864befb93c7</client-id>
